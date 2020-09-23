@@ -27,5 +27,3 @@ Use the following command to import these packages if you do not have them insta
 ```
 pip3 install {package name}
 ```
-
-### How The Program Works
