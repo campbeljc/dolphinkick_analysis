@@ -76,10 +76,10 @@ When run the program follows these processing steps:
 
 3. Four key time points based on specific positions during the dolphin kick are computed. The key time points are:
 
-      Key 1: Ankles are at farthest backwards position during the kick
-      Key 2: Ankles cross the midline in a forward direction
-      Key 3: Ankles are at farthest forward position during the kick
-      Key 4: Ankles cross the midline in a backward direction
+      * Key 1: Ankles are at farthest backwards position during the kick
+      * Key 2: Ankles cross the midline in a forward direction
+      * Key 3: Ankles are at farthest forward position during the kick
+      * Key 4: Ankles cross the midline in a backward direction
       
 4. All values are normalized to the height of the swimmer.
 
