@@ -66,6 +66,7 @@ Use the following command to create an input for the Library dataframe:
 python3 processog.py {swimmer name} {gender} {orientation} {speed} {swimmer's height}
 ```
 
+
 ### Program Logic
 
 When run the program follows these processing steps:
@@ -87,7 +88,7 @@ When run the program follows these processing steps:
 
 6. A table containing these p-values is returned.
 
-
+  
 ## Future Updates
 
 1. Add feature that plots a graph for each key time point with "Joint" on the x-axis and y-value on the y-axis. Mark in red values that have p-values less than or equal to 0.05.
