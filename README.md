@@ -51,7 +51,7 @@ The height of the swimmer is used to scale measurements.
 The image below represents the proper set-up.
 
 
-![Swimmer](Tracker_swimmer.png)
+![Swimmer](example_swimmer.png)
 
 
 ### Elite Swimmer Library
