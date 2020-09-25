@@ -90,7 +90,7 @@ When run the program follows these processing steps:
 
 ## Future Updates
 
-1. Add feature that plots a graph for each key time point with "Joint" on the x-axis and y-value on the y-axis. Mark in red values that have p-values less than or equal to 0.05
+1. Add feature that plots a graph for each key time point with "Joint" on the x-axis and y-value on the y-axis. Mark in red values that have p-values less than or equal to 0.05.
 
 2. Update plot feature to include averaged value of filtered elite swimmer data to compare.
 
