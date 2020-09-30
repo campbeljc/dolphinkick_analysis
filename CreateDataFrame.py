@@ -8,14 +8,14 @@ from tkinter.filedialog import askopenfilename
 
 import numpy as np
 
-def To_DataFrame(orientation, select=True):
+def To_DataFrame(orientation, select=False):
 
     Tk().withdraw()
 
     if select:
         filepath = askopenfilename()
     else:
-        filepath = "/Users/jennacampbell/Desktop/dolphin/data/Coughlin.xlsx"
+        filepath = "/Users/jennacampbell/Desktop/dolphin/data/NT2.xlsx"
 
     df = pd.read_excel(filepath)
 
