@@ -108,3 +108,5 @@ if __name__ == '__main__':
 
         data.iloc[:,1:].plot()
         plt.show()
+
+        print("hello")
