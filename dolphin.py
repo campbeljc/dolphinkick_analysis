@@ -8,7 +8,6 @@ if __name__ == '__main__':
     import pandas as pd
     import numpy as np
     from scipy import stats
-    import matplotlib.pyplot as plt
     import os
 
     from Library import import_library
@@ -18,7 +17,8 @@ if __name__ == '__main__':
     from createpdf import create_pdf
 
     #Set up parameters
-    input_values = strtobool(sys.argv[1])
+    # input_values = strtobool(sys.argv[1])
+    input_values = True
 
     if input_values:
         name = input("What is your name? ")
@@ -31,7 +31,6 @@ if __name__ == '__main__':
         speed = input("Are you kicking fast or slow? Enter Fast or Slow: ")
         while (speed != 'Fast') & (speed != 'Slow'):
             speed = input("Please enter Fast or Slow: ")
-        # height = input("What is your height in meters? ")
         while True:
             try:
                 height = float(input("Enter your height in meters: "))
@@ -119,6 +118,8 @@ if __name__ == '__main__':
 
         # Step 6: Create PDF
 
-        create_pdf(name, orientation, gender, speed, fig1_dest, fig2_dest, fig3_dest)
+        create_pdf(name, orientation, gender, speed, fig1_dest, fig2_dest, fig3_dest,destination=destination)
+
+        print("Finished! Your report is located in the same folder as your excel file.")
 
 

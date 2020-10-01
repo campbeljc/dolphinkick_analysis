@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import sys
+
 def find_keys(data):
 
     ankle = data['Ankle']
@@ -16,8 +18,11 @@ def find_keys(data):
             index = index + 1
 
     #First Key Point - Lowest Ankle Point from first point to key_2
-
-    key_1 = ankle.iloc[:key_2].idxmin()
+    try: 
+        key_1 = ankle.iloc[:key_2].idxmin()
+    except:
+        print("The data did not match the inputted orientation. Please try again.")
+        sys.exit()
 
     # Fourth Key Point - Point at which ankles pass hips (becomes negative)
 

@@ -1,36 +1,38 @@
-
-import matplotlib.pyplot as plt
 import numpy as np
 
 def plot_data(data, only_keys, mean, p_values):
+
+    #Bug that crashes python when Tk instance 
+    import matplotlib.pyplot as plt  
 
 
     fig1, ax1 = plt.subplots(nrows = 1, ncols=1, figsize=(5,4)) 
 
     # Plot Standard Imported Data
-    data_toplot = data
+    data_toplot = data.drop(['Hip'], axis=1)
     data_toplot.index = data_toplot['t']
+    ax1.set_prop_cycle(color=['#714bff','#15087b','#217bfc','#7aed85','#21f3fc'])
     data_toplot.iloc[:,1:].plot(ax=ax1)
-    ax1.set_ylabel("Vertical Displacement (m)", fontsize=10)
-    ax1.set_xlabel("time (s)", fontsize=10)
+    ax1.set_ylabel("Vertical Displacement (m)", fontsize=12)
+    ax1.set_xlabel("time (s)", fontsize=12)
 
     #Plot Time Intervals
 
-    fig3, axtime = plt.subplots(nrows = 1, ncols =1, figsize= (8,4))
+    fig3, axtime = plt.subplots(nrows = 1, ncols =1, figsize= (8,5.5))
     mean_times = mean['Time'].round(decimals=2)
     data_times = only_keys['Time'].round(decimals=2)
 
-    time_labels = ['Farthest Back to Hips', 'Hips to Farthest Forward', 'Farthest Forwart to Hips', 'Hips To Farthest Back']
+    time_labels = ['Point 4 to 1', 'Point 1 to 2', 'Point 2 to 3', 'Point 3 to 4']
     x = np.arange(len(time_labels))
     width = 0.35
 
-    rects1 = axtime.bar(x - width/2, data_times, width, label='Your Data')
-    rects2 = axtime.bar(x + width/2, mean_times, width, label='Professional Swimmer Averages')
+    rects1 = axtime.bar(x - width/2, data_times, width, label='Your Data',color=(0, 0.1, 0.2, 0.8))
+    rects2 = axtime.bar(x + width/2, mean_times, width, label='Professional Swimmer Averages',color=(0, 0, 0, 0.2))
 
-    axtime.set_ylabel('Time (s)')
+    axtime.set_ylabel('Time (s)',fontsize=12)
     axtime.set_xticks(x)
     axtime.set_yticks([0,0.05,0.1,0.15,0.2,0.25])
-    axtime.set_xticklabels(time_labels,fontsize=8)
+    axtime.set_xticklabels(time_labels,fontsize=12)
     axtime.legend()
 
     def autolabel(rects):
@@ -90,12 +92,12 @@ def plot_data(data, only_keys, mean, p_values):
                 y_values.append(index)
         return x_values, y_values
 
-    plot_data.iloc[0,:].plot(ax=ax2, label="Your Data")
-    plot_mean.iloc[0,:].plot(ax=ax2, label="Elite Swimmer Average")
+    plot_data.iloc[0,:].plot(ax=ax2, label="Your Data",color=(0, 0.1, 0.9,1))
+    plot_mean.iloc[0,:].plot(ax=ax2, label="Elite Swimmer Average",color=(0, 0, 0, 0.7))
     ax2.set_ylim(total_min+(0.05*total_min),total_max+(0.05*total_max))
     ax2.set_xlim(-10,120)
     ax2.set_xticks([])
-    ax2.set_ylabel('Vertical Displacement (normalized)', fontsize=10)
+    ax2.set_ylabel('Vertical Displacement (normalized)', fontsize=11)
     ax2.yaxis.grid()
     
     ys, xs = get_scatterpoints(outliers, plot_data, 0)
@@ -106,8 +108,8 @@ def plot_data(data, only_keys, mean, p_values):
 
     fig2.legend()
 
-    plot_data.iloc[1,:].plot(ax=ax3)
-    plot_mean.iloc[1,:].plot(ax=ax3)
+    plot_data.iloc[1,:].plot(ax=ax3,color=(0, 0.1, 0.9,1))
+    plot_mean.iloc[1,:].plot(ax=ax3,color=(0, 0, 0, 0.7))
     ax3.set_ylim(total_min+(0.05*total_min),total_max+(0.05*total_max))
     ax3.set_xlim(-10,120)
     ax3.set_xticks([])
@@ -116,8 +118,8 @@ def plot_data(data, only_keys, mean, p_values):
     ys, xs = get_scatterpoints(outliers, plot_data, 1)
     ax3.scatter(xs,ys, color='red')
 
-    plot_data.iloc[2,:].plot(ax=ax4)
-    plot_mean.iloc[2,:].plot(ax=ax4)
+    plot_data.iloc[2,:].plot(ax=ax4,color=(0, 0.1, 0.9,1))
+    plot_mean.iloc[2,:].plot(ax=ax4,color=(0, 0, 0, 0.7))
     ax4.set_ylim(total_min+(0.05*total_min),total_max+(0.05*total_max))
     ax4.set_xlim(-10,120)
     ax4.set_xticks([])
@@ -127,8 +129,8 @@ def plot_data(data, only_keys, mean, p_values):
     ys, xs = get_scatterpoints(outliers, plot_data, 2)
     ax4.scatter(xs,ys, color='red')
 
-    plot_data.iloc[3,:].plot(ax=ax5)
-    plot_mean.iloc[3,:].plot(ax=ax5)
+    plot_data.iloc[3,:].plot(ax=ax5,color=(0, 0.1, 0.9,1))
+    plot_mean.iloc[3,:].plot(ax=ax5,color=(0, 0, 0, 0.7))
     ax5.set_ylim(total_min+(0.05*total_min),total_max+(0.05*total_max))
     ax5.set_xlim(-10,120)
     ax5.set_xticks([])
