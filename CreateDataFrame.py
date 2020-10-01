@@ -8,13 +8,12 @@ from tkinter.filedialog import askopenfilename
 
 import numpy as np
 
-print("1")
+def To_DataFrame(orientation, select=True):
 
-def To_DataFrame(orientation, select=False):
-
-    # Tk().withdraw()
+    Tk().withdraw()
 
     if select:
+        print("Please select the excel file that includes your data")
         filepath = askopenfilename()
     else:
         filepath = "/Users/jennacampbell/Desktop/dolphin/data/NT2.xlsx"
