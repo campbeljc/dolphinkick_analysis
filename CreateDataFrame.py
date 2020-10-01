@@ -8,9 +8,11 @@ from tkinter.filedialog import askopenfilename
 
 import numpy as np
 
+print("1")
+
 def To_DataFrame(orientation, select=False):
 
-    Tk().withdraw()
+    # Tk().withdraw()
 
     if select:
         filepath = askopenfilename()
@@ -26,6 +28,6 @@ def To_DataFrame(orientation, select=False):
             df[columnName] = columnData
 
     destination = filepath.rpartition('/')[0]
-    swimmer = filepath.rpartition("/")[2].split(".")[0]
+    # swimmer = filepath.rpartition("/")[2].split(".")[0]
 
-    return destination, swimmer, df
+    return destination, df
