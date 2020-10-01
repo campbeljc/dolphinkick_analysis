@@ -4,7 +4,11 @@
 
 Analyzes differences in a swimmer's dolphin kick technique compared to elite swimmers.
 
-Input is a data table of x,y-coordinates of key points on a swimmer performing dolpihin kick (created using [Tracker software](https://physlets.org/tracker/)), output is table of x,y-coordinates that are significantly different from the average of the x,y-coordinates of elite swimmers performing dolphin kick.
+Input is a data table of x,y-coordinates of key points on a swimmer performing dolpihin kick (created using [Tracker software](https://physlets.org/tracker/)), output is a PDF file containing three graphs describing the data. The graphs are as follows:
+
+1. Vertical displacement of major joints on the swimmers body throughout one complete cycle of kick.
+2. Time to transition between key parts of the kick. Graph shows comparison between your data and library of elite swimmer data.
+3. Comparison of vertical displacement of key joints with average from elite swimmer library. Data is shown at four different key parts of the kick cycle.
 
 ## Running the Software
 
