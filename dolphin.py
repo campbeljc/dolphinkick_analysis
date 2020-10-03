@@ -17,8 +17,7 @@ if __name__ == '__main__':
     from createpdf import create_pdf
 
     #Set up parameters
-    # input_values = strtobool(sys.argv[1])
-    input_values = True
+    input_values = False
 
     if input_values:
         name = input("What is your name? ")
@@ -105,7 +104,7 @@ if __name__ == '__main__':
 
         # Step 5: Plot Stored Data against new Data.
 
-        fig1, fig2, fig3 = plot_data(data, only_keys, mean, p_values)
+        fig1, fig2, fig3 = plot_data(data, only_keys, mean, p_values, orientation)
 
         fig1.savefig('fig1.png',bbox_inches='tight')
         fig2.savefig('fig2.png',bbox_inches='tight')
