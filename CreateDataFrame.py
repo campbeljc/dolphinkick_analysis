@@ -8,7 +8,7 @@ from tkinter.filedialog import askopenfilename
 
 import numpy as np
 
-def To_DataFrame(orientation, select=True):
+def To_DataFrame(orientation, select=False):
 
     Tk().withdraw()
 

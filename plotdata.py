@@ -1,6 +1,6 @@
 import numpy as np
 
-def plot_data(data, only_keys, mean, p_values):
+def plot_data(data, only_keys, mean, p_values, orientation):
 
     #Bug that crashes python when Tk instance 
     import matplotlib.pyplot as plt  
@@ -61,6 +61,18 @@ def plot_data(data, only_keys, mean, p_values):
         total_min = mean_min
 
     #Create Comparison Plot
+
+    def flip(data):
+        for (columnName, columnData) in data.iteritems():
+            # print(columnName,columnData)
+            if columnName == 't': continue
+            columnData = 0 - columnData
+            data[columnName] = columnData
+        return data
+
+    if orientation == 'Front':
+        only_keys = flip(only_keys)
+        mean = flip(mean)
 
     fig2, ((ax2, ax3),(ax4,ax5)) = plt.subplots(nrows = 2, ncols=2, figsize=(12,8)) 
 

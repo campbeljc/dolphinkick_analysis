@@ -34,13 +34,14 @@ def create_pdf(name, orientation, gender, speed, fig1_dest, fig2_dest, fig3_dest
     pdf.image(fig1_dest, x=7, y=42, h=70)
     pdf.image(fig3_dest, x=102, y=42, h=66)
 
-    pdf.set_xy(x=25,y=110)
-    pdf.set_font('Arial','',7)
+    pdf.set_xy(x=24,y=110)
+    pdf.set_font('Arial','',9)
     pdf.set_text_color(r=0,g=0,b=0)
-    graph3_explanation = 'Time interval between key points of kick. See below for definitions of key points'
+    graph3_explanation = 'Time interval between key points of kick. See below for \ndefinitions of key points'
     graph1_explanation = 'All displacement values calculated relative to hip'
     pdf.cell(50,8,graph1_explanation,0,0,'C')
-    pdf.cell(127,8,graph3_explanation,0,1,'R')
+    pdf.set_xy(x=115,y=110)
+    pdf.multi_cell(0,4,graph3_explanation,0,1,'R')
     
 
     graph2_title = 'Statistical Analysis of Vertical Displacement'
