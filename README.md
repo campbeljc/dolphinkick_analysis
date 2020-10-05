@@ -36,7 +36,7 @@ pip3 install {package name}
 
 Here is an example of the report the script outputs.
 
-![Example](example_output.pdf)
+![Example Output](example_output.png)
 
 ## How the Software Works
 
