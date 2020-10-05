@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     # Step 1: Inport data to be analyzed and convert it to Data Frame.
 
-    destination, swimmer, data = To_DataFrame(orientation)
+    destination, data = To_DataFrame(orientation)
 
     print("loaded as data frame")
 

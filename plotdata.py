@@ -97,6 +97,7 @@ def plot_data(data, only_keys, mean, p_values, orientation):
         x_values = []
         y_values = []
         for index, value in row.items():
+            if index == 70: continue
             if value < 0.1:
                 something = data.iloc[n]
                 # print(something[index])

@@ -17,7 +17,7 @@ if __name__ == '__main__':
     from createpdf import create_pdf
 
     #Set up parameters
-    input_values = False
+    input_values = True
 
     if input_values:
         name = input("What is your name? ")
@@ -37,11 +37,11 @@ if __name__ == '__main__':
             except ValueError:
                 print("Please enter only a number: ")
     else:
-        name = 'Jenna'
-        gender = 'Male'
+        name = 'Dana Vollmer'
+        gender = "Female"
         orientation = 'Front'
         speed = 'Fast'
-        height = 1.74
+        height = 1.82
 
     print("Processing...one moment please")
 
@@ -52,7 +52,8 @@ if __name__ == '__main__':
     # Step 2: Analyze Stored Data. Analyze data frames from all videos corresponding to parameters of new data. Load in data and calculate mean and variance for key points.
 
     ogdata = import_library()
-    filtered_data = ogdata[(ogdata['Gender'] == gender) & (ogdata['Side'] == orientation)]
+    filtered_data = ogdata[(ogdata['Side'] == orientation)]
+    # (ogdata['Gender'] == gender) & 
     # Add this when we have enough data to include speed as a filter.
     # & (ogdata['Speed'] == speed
 
