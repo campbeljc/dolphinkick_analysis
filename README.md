@@ -32,6 +32,12 @@ Use the following command to import these packages if you do not have them insta
 pip3 install {package name}
 ```
 
+## Example Output
+
+Here is an example of the report the script outputs.
+
+![Example](example_output.pdf)
+
 ## How the Software Works
 
 ### Creating the Input File
