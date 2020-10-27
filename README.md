@@ -23,9 +23,9 @@ To run the program type the following into terminal:
 python3 dolphin.py
 ```
 
-The software will ask you a series of questions about your gender[^1], orientation while performing the dolphin kick, and the speed at which you were performing it. These questions are to select an equivelant subset of data from the database of elite swimmers to compare to.
+The software will ask you a series of questions about your gender<sup>1</sup>, orientation while performing the dolphin kick, and the speed at which you were performing it. These questions are to select an equivelant subset of data from the database of elite swimmers to compare to.
 
-[^1]: "Gender" here refers to the binary category in which you compete in swimming. While gender does not exist on this exclusive binary, at this time, there are only two categories for "gender" in athletics: Male and Female. For the sake of more accurate physical comparisons, that is the classification that is used here. 
+<sup>1:"Gender" here refers to the binary category in which you compete in swimming. While gender does not exist on this exclusive binary, at this time, there are only two categories for "gender" in athletics: Male and Female. For the sake of more accurate physical comparisons, that is the classification that is used here.</sup>
 
 Please have the following installed to run the program:
 
