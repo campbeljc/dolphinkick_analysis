@@ -4,11 +4,17 @@
 
 Analyzes differences in a swimmer's dolphin kick technique compared to elite swimmers.
 
-Input is a data table of x,y-coordinates of key points on a swimmer performing dolpihin kick (created using [Tracker software](https://physlets.org/tracker/)), output is a PDF file containing three graphs describing the data. The graphs are as follows:
+Input is a data table of y-coordinates of the joints on a swimmer performing dolpihin kick (created using [Tracker software](https://physlets.org/tracker/)). Output is a PDF file containing three graphs describing the data. The graphs are as follows:
 
-1. Vertical displacement of major joints on the swimmers body throughout one complete cycle of kick.
-2. Time to transition between key parts of the kick. Graph shows comparison between your data and library of elite swimmer data.
-3. Comparison of vertical displacement of key joints with average from elite swimmer library. Data is shown at four different key parts of the kick cycle.
+1. Vertical displacement (y-coordinates) of joints on the swimmers body throughout one complete cycle of kick.
+2. Time between each of four established key points of the kick cycle (See Program Logic for description of key points). Graph shows comparison between your data and library of elite swimmer data.
+3. Comparison of vertical displacement of swimmer's joints with average from elite swimmer library. Data is shown at each of four key points of the kick cycle.
+
+## Example Output
+
+Here is an example of the report the script outputs.
+
+![Example Output](example_output-1.png)
 
 ## Running the Software
 
@@ -17,7 +23,9 @@ To run the program type the following into terminal:
 python3 dolphin.py
 ```
 
-The software will ask you a series of questions about your gender, orientation while performing the dolphin kick, and the speed at which you were performing it. These questions are to select an equivelant subset of data from the database of elite swimmers to compare to.
+The software will ask you a series of questions about your gender[^1], orientation while performing the dolphin kick, and the speed at which you were performing it. These questions are to select an equivelant subset of data from the database of elite swimmers to compare to.
+
+[^1]: "Gender" here refers to the binary category in which you compete in swimming. While gender does not exist on this exclusive binary, at this time, there are only two categories for "gender" in athletics: Male and Female. For the sake of more accurate physical comparisons, that is the classification that is used here. 
 
 Please have the following installed to run the program:
 
@@ -31,12 +39,6 @@ Use the following command to import these packages if you do not have them insta
 ```
 pip3 install {package name}
 ```
-
-## Example Output
-
-Here is an example of the report the script outputs.
-
-![Example Output](example_output-1.png)
 
 ## How the Software Works
 
